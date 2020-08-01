@@ -1,0 +1,189 @@
+<html>
+<link href="billingwithamtwords.css" type="text/css" rel="stylesheet" />
+<div class="p">
+<head><center><h1>MALAYSIAN TOWNSHIP NORTH PHASE<br>
+OWNERS WELFARE ASSOCIATION<br></h1>
+<h2>(Regd.No.519/2017)</h2>
+<h3>#506 SBRT (F),LIG Rain Tree Park,KPHB Colony,Kukatpally,Hyderabad-85</h3>
+
+<meta http-equiv="Content-Type" content="text/html;
+charset=iso-8859-1">
+
+</head>
+
+<br><h1><strong>RECEIPT</strong></h1>
+</center>
+<h3>
+<p align="left">No: <input type="number" id="myNumber" min="1">
+
+<p></p>
+
+
+
+
+<script>
+function myFunction1() {
+    document.getElementById("myNumber").stepUp(1);
+}
+</script>								
+</p>
+<p id="demo1"></p>
+<script>
+var d = new Date();
+d.date= d.toDateString();
+</script>
+<script type="text/javascript">
+         document.write("Date: " + d.date + "<br>");
+       
+      </script>
+</p> 
+</h3>
+<h3>
+<form action="includes/contact.php" method="post">
+
+<p align="left">Received with thanks from Sri/Smt 
+    <input name="last_name" id="Last_Name" type="text" /> </p>
+
+<p align="left"> <label for="Block">Block no:</label>
+    <input name="block" id="Email" type="block" />
+
+    <label for="Flat">Flat No:</label>
+    <input name="flat" id="flat" type="flat" />
+Malaysian Township North Phase
+</p> 
+ <body>
+<p align="left"><p align="left"> <b> Amount in Words(Rs):</b>
+<p id="demo"></p>
+<script>
+function numToString(x)
+{
+var r=0;
+var txter=x;
+var sizer=txter.length;
+var numStr="";
+if(isNaN(txter))
+{
+
+document.getElementById("demo").innerHTML = " invalid number";
+exit();
+}
+var n=parseInt(x);
+var places=0;
+var str="";
+var entry=0;
+while(n>=1)
+{
+r=parseInt(n%10);
+
+if(places<3 && entry==0)
+{
+numStr=txter.substring(txter.length-0,txter.length-3) // Checks for 1 to 999.
+str=onlyDigit(numStr); //Calls function for last 3 digits of the value.
+entry=1;
+}
+
+if(places==3)
+{
+ numStr=txter.substring(txter.length-5,txter.length-3) 
+ if(numStr!="")
+ {
+  str=onlyDigit(numStr)+ " Thousand "+str;
+ }
+}
+
+if(places==5)
+{
+ numStr=txter.substring(txter.length-7,txter.length-5) //Substring for 5 place to 7 place of the string
+ if(numStr!="")
+ {
+  str=onlyDigit(numStr)+ " Lakhs "+str; //Appends the word lakhs to it
+ }
+}
+
+if(places==6)
+{
+ numStr=txter.substring(txter.length-9,txter.length-7)  //Substring for 7 place to 8 place of the string
+ if(numStr!="")
+ {
+  str=onlyDigit(numStr)+ " Crores "+str;        //Appends the word Crores
+ }
+}
+
+n=parseInt(n/10);
+places++;
+}
+document.getElementById("demo").innerHTML =str;
+
+}
+
+
+
+
+function onlyDigit(n)
+{
+//Arrays to store the string equivalent of the number to convert in words
+var units=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine'];
+var randomer=['','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'];
+var tens=['','Ten','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety'];
+var r=0;
+var num=parseInt(n);
+var str="";
+var pl="";
+var tenser="";
+while(num>=1)
+{
+r=parseInt(num%10);
+tenser=r+tenser;
+ if(tenser<=19 && tenser>10) //Logic for 10 to 19 numbers
+ {
+ str=randomer[tenser-10];
+ }
+ else
+ {
+  if(pl==0)        //If units place then call units array.
+  {
+  str=units[r];
+  }
+  else if(pl==1)    //If tens place then call tens array.
+  {
+  str=tens[r]+" "+str;
+  }
+ }
+ if(pl==2)        //If hundreds place then call units array.
+ {
+ str=units[r]+" Hundred "+str;
+ }
+ 
+num=parseInt(num/10);
+pl++;
+}
+return str;
+}
+function myFunction() {
+    window.print();
+}
+
+</script>
+<p align="left"><p align="left"><b>
+Towards maintainence charges for the month/months of ________________________________<br>
+By Cash/Cheque ______________________________________________________________________<br>
+</b>
+<form name="fm" id="fm">
+</p>
+<b><p align="left">
+Amount in figures
+</b>
+<input type="text"  name="txtinput" id="txtinput" maxlength="9" /> 
+<br><br><br></h2>
+<h2>
+<pre class="tab"><p align="left"><p align="left">Recieved By		President		Gen Secretary		Treasurer													</p></p></pre></p></p></p></p></h2></div>  
+<div class="s">
+</div>
+</form><p align="center">
+
+<button type="button"  onclick= numToString(txtinput.value);myFunction1();myFunction();> print
+</button>
+    </form>
+	</h3>
+   </body>
+</html>

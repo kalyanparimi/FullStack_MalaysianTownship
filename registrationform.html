@@ -1,0 +1,54 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>REGISTRATION FORM</title>
+</head>
+
+<body background="adminlogin.png"><br><br><br>
+<center><h1>PLEASE DO REGISTER HERE</h1></center>
+<fieldset><center>
+    <legend><strong>REGISTRATION</strong></legend><br><br>
+
+    <form action="registrationform.php" method="post" />
+<table>
+
+<tr>
+<td><b>Block Number *</td><td><input type="number" name="blockno" required/><br />
+</tr>
+<tr>
+<td><b>Flat Number *</td><td><input type="text" name="flatno" required/><br /></td>
+</tr>
+<tr>
+<td><b>House Number *</td><td><input type="text" name="houseno" required/>&nbsp;<i>(blockno+flatno)</i><br /></td>
+</tr>
+<tr>
+<td><b>Resident Name *</td><td><input type="text" name="resname" required/><br /></td>
+</tr>
+<tr>
+<td><b>Registration Number</td><td><input type="text" name="regno" /><br /></td>
+</tr>
+<tr>
+<td><b>Registration Date *</td><td><input type="date" name="regdate" /><br /></td>
+</tr>
+<tr>
+<td><b>Email Id</td><td><input type="email" name="emailid" /><br /></td>
+</tr>
+<tr>
+<td><b>Phone1 *</td><td><input type="number" name="phone1" min="10" required/><br /></td>
+</tr>
+<tr>
+<td><b>Phone2</td><td><input type="number" name="phone2" min="10"/><br /></td>
+</tr>
+
+
+</table>
+
+
+<br><br><input type="submit" value="Register">
+<br><br><br><i><h4>**Please fill NULL where details not available <br><br>**Registration date is mandatory
+    </form>
+</fieldset>
+<br />
+<center></body>
+</html>
